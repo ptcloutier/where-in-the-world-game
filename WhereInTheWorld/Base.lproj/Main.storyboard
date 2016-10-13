@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhereInTheWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-gc-8O3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfK-ur-Chc">
+                                <rect key="frame" x="20" y="480" width="560" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zg9-QT-tZb">
+                                        <rect key="frame" x="8" y="42" width="544" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-Fd-wiF">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Bq-dU-OUZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4z-sZ-qsd">
+                                                <rect key="frame" x="182" y="0.0" width="181" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c01-vJ-rxp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-HW-ivc">
+                                                <rect key="frame" x="363" y="0.0" width="182" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FrT-eo-a4B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8Ub-nX-8Fc"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is this?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oci-xG-my5">
+                                        <rect key="frame" x="207" y="8" width="147" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Zg9-QT-tZb" secondAttribute="bottom" constant="8" id="6FN-Za-ISt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zg9-QT-tZb" secondAttribute="trailing" constant="8" id="8He-wA-528"/>
+                                    <constraint firstItem="Zg9-QT-tZb" firstAttribute="leading" secondItem="PfK-ur-Chc" secondAttribute="leading" constant="8" id="Zaj-wE-nWP"/>
+                                    <constraint firstAttribute="height" constant="100" id="hNo-02-UQw"/>
+                                    <constraint firstItem="oci-xG-my5" firstAttribute="top" secondItem="PfK-ur-Chc" secondAttribute="top" constant="8" id="mTj-KO-Ch7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="onY-MJ-MkH"/>
+                                    <constraint firstItem="oci-xG-my5" firstAttribute="centerX" secondItem="PfK-ur-Chc" secondAttribute="centerX" id="tZG-a9-ioN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLu-gc-KG6">
+                                <rect key="frame" x="575.5" y="28" width="4.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.025834878906607628" green="0.96218758821487427" blue="0.72075968980789185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PfK-ur-Chc" secondAttribute="bottom" constant="20" id="3oN-Y2-pE9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e4x-gc-8O3" secondAttribute="trailing" constant="-20" id="5IG-6P-JFl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e4x-gc-8O3" secondAttribute="bottom" id="Lhq-KN-FMM"/>
+                            <constraint firstItem="oLu-gc-KG6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="R3b-ML-9H1"/>
+                            <constraint firstItem="PfK-ur-Chc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bRB-Gc-2iQ"/>
+                            <constraint firstItem="PfK-ur-Chc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cg5-Sh-Sd0"/>
+                            <constraint firstItem="e4x-gc-8O3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dXr-ED-9ki"/>
+                            <constraint firstItem="e4x-gc-8O3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="wbb-hh-o5j"/>
+                            <constraint firstItem="oLu-gc-KG6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zpV-qW-U7U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answer1" destination="zIh-Fd-wiF" id="ZC9-GL-gAv"/>
+                        <outlet property="answer2" destination="r4z-sZ-qsd" id="3Ms-hb-1Yk"/>
+                        <outlet property="answer3" destination="fR8-HW-ivc" id="iIf-Pe-tEp"/>
+                        <outlet property="mapView" destination="e4x-gc-8O3" id="lMk-tg-3oH"/>
+                        <outlet property="score" destination="oLu-gc-KG6" id="zf6-XM-9wj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="304"/>
+        </scene>
+    </scenes>
+</document>
