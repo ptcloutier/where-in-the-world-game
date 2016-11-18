@@ -1,4 +1,4 @@
-# Where In The World-Game
+# Where In The World 
 Geography guessing-game based on a satellite images. Can you guess where this image was taken? Persistent storage keeps track of your score. 
 
 <p align="center">
